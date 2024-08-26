@@ -33,7 +33,7 @@ section#login {
     overflow: hidden;
 
     background-color: #ffffff;
-    width: 250px;
+    width: 260px;
     height: 500px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px #00000090;
@@ -47,7 +47,15 @@ section#login > div#imagem {
     height: 200px;
 }
 
+.material-symbols-outlined {
+    font-size: 1.2em;
+}
+
 section#login > div#formulario {
     display: block;
     padding: 10px;
+}
+
+div#formulario > h1 {
+    text-align: center;
 }
