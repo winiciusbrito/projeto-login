@@ -28,8 +28,7 @@ main {
 section#login {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 50%;    
     overflow: hidden;
 
     background-color: #ffffff;
@@ -37,6 +36,10 @@ section#login {
     height: 480px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px #00000090;
+
+    transform: translate(-50%, -50%);
+    transition: width .1s, height .1s;
+    transition-timing-function: ease;
 }
 
 section#login > div#imagem {
@@ -66,15 +69,37 @@ div#formulario > p {
 
 form > div.campo {
     background-color: #5f2c82;
+    border: 1px solid #5f2c82;
     display: block;
     width: 100%;
-    height: 35px;
+    height: 40px;
     border-radius: 5px;
     margin: 5px 0px;
 }
 
 div.campo > label {
     display: none;
+}
+
+div.campo > span {
+    color: #ffffff;    
+    font-size: 1.5em;
+    padding: 6px 5px;
+}
+
+div.campo > input {
+    background-color: #8ee7e4;
+    font-size: 1em;
+    width: calc(100% - 38.4px);
+    height: 100%;
+    border-radius: 5px;
+    padding: 1px 3px;
+    transform: translateY(-3.5px);
+}
+/* É quando clicar/digitar/focar dentro do elemento - focus*/
+div.campo > input:focus-within {
+    background-color: #ffffff;
+    border: none;
 }
 
 form > div > input[type="submit"] {
@@ -112,6 +137,8 @@ form > div > a.botao:hover {
     background-color: #60d4d1;
 }
 
-form > div > a.botao > span {
+form > div > a.botao > span {    
     font-size: 0.8em;
+    padding: 2px;
+    transform: translateY(2px);
 }
